@@ -7,9 +7,18 @@
     @apply text-2xl fill-gray cursor-pointer hover:opacity-50;
   }
   .bg-circles {
-    @apply mt-[5rem] absolute border rounded-full border-[#333];
+    @apply mt-[20rem] absolute border rounded-full border-[#333];
   }
   .heroBtn {
     @apply px-6 py-2 border-[#2424] rounded-full uppercase text-sm tracking-widest text-gray transition-all border hover:border-secondary/40 hover:text-secondary/40;
+  }
+  .section-h2 {
+    @apply text-center uppercase tracking-[20px] text-gray text-2xl pt-16;
+  }
+  .contactInput {
+    @apply w-full outline-none bg-slate-400/10 rounded-sm border-b px-5 py-3 text-gray/40 placeholder-gray transition-all focus:border-secondary/40 focus:text-secondary/40;
+  }
+  .contactBtn {
+    @apply w-full bg-secondary py-4 rounded-lg text-black font-bold hover:opacity-80;
   }
 }
