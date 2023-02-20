@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .social-icon {
+    @apply text-2xl fill-gray cursor-pointer hover:opacity-50;
+  }
+  .bg-circles {
+    @apply mt-[5rem] absolute border rounded-full border-[#333];
+  }
+  .heroBtn {
+    @apply px-6 py-2 border-[#2424] rounded-full uppercase text-sm tracking-widest text-gray transition-all border hover:border-secondary/40 hover:text-secondary/40;
+  }
+}
