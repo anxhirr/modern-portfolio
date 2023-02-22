@@ -14,8 +14,9 @@ const Project = ({ current, projects }: Props) => {
       <Image
         src={urlFor(projects[current].icon).url() || ''}
         alt={projects[current].title}
-        width={100}
-        height={100}
+        width={500}
+        height={500}
+        onClick={() => window.open(projects[current].link, '_blank')}
       />
       <h3 className='text-4xl font-semibold'>
         <span className='decoration-secondary/50 underline'>
@@ -26,7 +27,6 @@ const Project = ({ current, projects }: Props) => {
       <p className='text-lg text-center mt-8'>
         {projects[current].description}
       </p>
-      <LinkTo link={projects[current].link}>Visit</LinkTo>
     </div>
   )
 }
