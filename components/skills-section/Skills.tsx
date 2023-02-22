@@ -5,7 +5,6 @@ import Skill from './Skill'
 const Skills = async () => {
   const skills = await fetchSkills()
 
-  console.log('skills', skills)
   return (
     <div className='min-h-screen flex flex-col '>
       <h2 className='section-h2'>Skills</h2>

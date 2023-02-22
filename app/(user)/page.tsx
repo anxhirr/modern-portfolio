@@ -21,7 +21,8 @@ const HomePage = () => {
         {/* @ts-expect-error Server Component */}
         <Skills />
       </section>
-      <section id='projects' className='snap-start'>
+      <section id='projects' className='snap-start relative'>
+        {/* @ts-expect-error Server Component */}
         <Projects />
       </section>
       <section id='contact' className='snap-start'>

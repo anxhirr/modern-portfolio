@@ -8,7 +8,6 @@ import TypeWriter from './TypeWriter'
 const Hero = async () => {
   const image = await fetchLogo()
 
-  console.log('image', image)
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
       <BackgroundCircles />

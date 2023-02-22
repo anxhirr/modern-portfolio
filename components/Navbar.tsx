@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const Navbar = () => {
   return (
-    <nav className='sticky top-0 flex items-start xl:items-center justify-between p-5 z-20 max-w-7xl mx-auto'>
+    <nav className='sticky top-0 main-container flex items-start xl:items-center justify-between p-5 z-20 max-w-7xl mx-auto'>
       <div>
         <motion.ul
           initial={{
