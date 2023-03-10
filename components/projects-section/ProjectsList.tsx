@@ -11,6 +11,7 @@ const Projects = async () => {
         <h3 className='section-h3'>
           Click the image to be taken to the project.
         </h3>
+
         <Carousel projects={projects} />
       </div>
       <div className='w-full absolute top-[30%] h-[25rem]  bg-[#f7ab0a]/10 skew-y-12 z-0' />
