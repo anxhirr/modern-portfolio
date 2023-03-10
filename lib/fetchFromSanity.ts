@@ -21,3 +21,8 @@ export const fetchProjects = async () => {
   const projects = await sanityClient.fetch(query)
   return projects
 }
+export const fetchSocials = async () => {
+  const query = groq`*[_type == "socials"]`
+  const socials = await sanityClient.fetch(query)
+  return socials
+}
