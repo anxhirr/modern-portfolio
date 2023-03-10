@@ -5,22 +5,29 @@ type Sanity = {
   _type: string
   _updatedAt: string
 }
-export type SkillType = {
-  _id: string
+type SanityImage = {
+  asset: {
+    _ref: string
+    _type: string
+  }
+  type: string
+}
+
+export interface SkillType extends Sanity {
   level: number
   name: string
-  icon: string
+  icon: SanityImage
 }
-export type ProjectType = {
+export interface ProjectType extends Sanity {
   _id: string
   title: string
   description: string
-  icon: string
+  icon: SanityImage
   link: string
 }
 
-export interface Social extends Sanity {
+export interface SocialType extends Sanity {
   name: string
-  icon: string
+  icon: SanityImage
   url: string
 }

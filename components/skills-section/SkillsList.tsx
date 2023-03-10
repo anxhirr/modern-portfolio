@@ -16,19 +16,6 @@ const Skills = async () => {
           {skills.map((skill: SkillType) => (
             <Skill key={skill._id} skill={skill} />
           ))}
-
-          {/* <Skill direction='left' />
-          <Skill direction='left' />
-          <Skill direction='left' />
-          <Skill direction='left' />
-          <Skill direction='right' />
-          <Skill direction='right' />
-          <Skill direction='right' />
-          <Skill direction='right' />
-          <Skill direction='left' />
-          <Skill direction='left' />
-          <Skill direction='left' />
-          <Skill direction='left' /> */}
         </div>
       </div>
     </div>

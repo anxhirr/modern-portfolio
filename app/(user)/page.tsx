@@ -1,8 +1,8 @@
 import Contact from '../../components/contact-section/Contact'
 import Hero from '../../components/hero/Hero'
-import Projects from '../../components/projects-section/Projects'
-import Services from '../../components/services-section/Services'
-import Skills from '../../components/skills-section/Skills'
+import Projects from '../../components/projects-section/ProjectsList'
+import Services from '../../components/services-section/ServicesList'
+import Skills from '../../components/skills-section/SkillsList'
 
 const HomePage = () => {
   return (

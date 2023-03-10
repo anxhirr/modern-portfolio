@@ -2,10 +2,10 @@
 
 import Image from 'next/image'
 import { urlFor } from '../../lib/sanity.client'
-import { Social } from '../../typings.s'
+import { SocialType } from '../../typings.s'
 
 type Props = {
-  socials: Social[]
+  socials: SocialType[]
 }
 
 import { motion } from 'framer-motion'
@@ -29,7 +29,7 @@ const Socials = ({ socials }: Props) => {
         }}
         className='flex gap-3'
       >
-        {socials.map((social: Social) => (
+        {socials.map((social: SocialType) => (
           <li key={social._id}>
             <a href={social.url} target='_blank'>
               <Image
