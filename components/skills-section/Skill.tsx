@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { urlFor } from '../../lib/sanity.client'
 import { SkillType } from '../../typings.s'
@@ -11,20 +8,9 @@ type Props = {
 
 const Skill = ({ skill }: Props) => {
   return (
-    <motion.div
+    <div
       className='group relative flex
    cursor-pointer'
-      initial={{
-        x: 100,
-        opacity: 0,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      whileInView={{
-        x: 0,
-        opacity: 1,
-      }}
     >
       <Image
         src={urlFor(skill.icon).url()}
@@ -40,7 +26,7 @@ const Skill = ({ skill }: Props) => {
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 export default Skill
