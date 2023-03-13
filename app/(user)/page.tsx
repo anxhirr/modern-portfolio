@@ -11,8 +11,6 @@ const HomePage = () => {
         {/* @ts-expect-error Server Component */}
         <Hero />
       </section>
-      <section>{/* About  */}</section>
-      <section>{/* Experience  */}</section>
       <section id='services' className='snap-start main-container'>
         {/* @ts-expect-error Server Component */}
         <Services />

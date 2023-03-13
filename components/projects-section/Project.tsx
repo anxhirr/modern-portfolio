@@ -1,32 +1,30 @@
 import Image from 'next/image'
 import { urlFor } from '../../lib/sanity.client'
 import { ProjectType } from '../../typings.s'
-import LinkTo from './LinkTo'
+import { FiExternalLink } from 'react-icons/fi'
 
 type Props = {
-  current: number
-  projects: ProjectType[]
+  project: ProjectType
 }
 
-const Project = ({ current, projects }: Props) => {
+const Project = ({ project }: Props) => {
   return (
-    <div className='text-center max-w-lg'>
+    <div className='m-auto max-w-lg'>
       <Image
-        src={urlFor(projects[current].icon).url() || ''}
-        alt={projects[current].title}
+        src={urlFor(project.icon).url() || ''}
+        alt={project.title}
         width={500}
         height={500}
-        onClick={() => window.open(projects[current].link, '_blank')}
       />
-      <h3 className='text-4xl font-semibold'>
-        <span className='decoration-secondary/50 underline'>
-          Project {current + 1} of {projects.length} :
-        </span>{' '}
-        {projects[current].title}
-      </h3>
-      <p className='text-lg text-center mt-8'>
-        {projects[current].description}
-      </p>
+      <div className='text-4xl font-semibold'>{project.title} </div>
+      <p className='text-md text-center mt-5'>{project.description}</p>
+      <button
+        className='flex items-center justify-center mt-5 m-auto bg-[#f7ab0a] font-semibold py-2 px-4 rounded-full'
+        onClick={() => window.open(project.link, '_blank')}
+      >
+        <p className='pr-2'>Check out website</p>
+        <FiExternalLink className='inline-block text-lgse' />
+      </button>
     </div>
   )
 }

@@ -15,6 +15,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.1",
     "react-icons": "^4.7.1",
+    "react-responsive-carousel": "^3.2.23",
     "react-simple-typewriter": "^5.0.1",
     "sanity": "^3.0.0",
     "styled-components": "^5.2.0",

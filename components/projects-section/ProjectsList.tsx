@@ -1,5 +1,5 @@
 import { fetchProjects } from '../../lib/fetchFromSanity'
-import Carousel from '../Carousel'
+import CarouselProvider from '../CarouselProvider'
 
 const Projects = async () => {
   const projects = await fetchProjects()
@@ -12,7 +12,7 @@ const Projects = async () => {
           Click the image to be taken to the project.
         </h3>
 
-        <Carousel projects={projects} />
+        <CarouselProvider projects={projects} />
       </div>
       <div className='w-full absolute top-[30%] h-[25rem]  bg-[#f7ab0a]/10 skew-y-12 z-0' />
     </>

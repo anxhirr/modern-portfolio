@@ -34,4 +34,7 @@
     padding-right: var(--scrollbar);
     width: min(var(--max-width), 100% - var(--padding) * 2);
   }
+  .carousel-arrow {
+    @apply absolute top-[50%] z-10 p-2 rounded-full hover:bg-[#f7ab0a]/10;
+  }
 }

@@ -12,7 +12,7 @@ const Skills = async () => {
         Hover over the icons for currency proficiency.
       </h3>
       <div className='flex justify-center items-center flex-1'>
-        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 items-center justify-center'>
+        <div className='grid grid-cols-3 md:grid-cols-4 gap-5 items-center justify-center'>
           {skills.map((skill: SkillType) => (
             <Skill key={skill._id} skill={skill} />
           ))}
