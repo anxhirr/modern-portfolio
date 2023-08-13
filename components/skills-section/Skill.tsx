@@ -1,16 +1,32 @@
+"use client"
+
 import Image from 'next/image'
 import { urlFor } from '../../lib/sanity.client'
 import { SkillType } from '../../typings.s'
+import { motion } from 'framer-motion'
 
 type Props = {
   skill: SkillType
+  // swipe can be 100 or -100
+  swipe: string
 }
 
-const Skill = ({ skill }: Props) => {
+const Skill = ({ skill, swipe }: Props) => {
   return (
-    <div
+    <motion.div
       className='group relative flex
    cursor-pointer'
+      initial={{
+        x: swipe,
+        opacity: 0,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
+      }}
     >
       <Image
         src={urlFor(skill.icon).url()}
@@ -26,7 +42,7 @@ const Skill = ({ skill }: Props) => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 export default Skill

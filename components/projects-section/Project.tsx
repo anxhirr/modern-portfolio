@@ -22,7 +22,7 @@ const Project = ({ project }: Props) => {
         className='flex items-center justify-center mt-5 m-auto bg-[#f7ab0a] font-semibold py-2 px-4 rounded-full'
         onClick={() => window.open(project.link, '_blank')}
       >
-        <p className='pr-2'>Check out website</p>
+        <span className='pr-2'>Check out website</span>
         <FiExternalLink className='inline-block text-lgse' />
       </button>
     </div>

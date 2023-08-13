@@ -10,29 +10,34 @@ type Props = {
     title: string
     description: string
     icon: ReactNode
-    shouldSwipeFromLeft: boolean
     _id: string
   }[]
 }
 
 const Service = ({ services }: Props) => {
+  console.log(services)
+
+
   return (
     <>
-      {services.map((service) => (
-        <motion.li
-          // initial={{
-          //   x: service.shouldSwipeFromLeft ? -100 : 100,
-          //   opacity: 0,
-          // }}
-          // transition={{
-          //   duration: 1,
-          // }}
-          // whileInView={{
-          //   x: 0,
-          //   opacity: 1,
-          // }}
+      {services.map((service, i) => {
+        // swipe half of the services from left and half from right
+        const halfSwipe = i % 2 === 0 ? '-100' : '100'
+
+        return <motion.li
+          initial={{
+            x: halfSwipe,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
           key={service._id}
-          className='flex text-left'
+          className='flex text-left gap-2'
         >
           <div className='mx-3'>
             <div className='p-4 w-16 h-16 grid place-items-center text-5xl bg-secondary rounded-full'>
@@ -51,7 +56,7 @@ const Service = ({ services }: Props) => {
             </p>
           </div>
         </motion.li>
-      ))}
+      })}
     </>
   )
 }
